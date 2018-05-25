@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { translate }        from 'react-i18next';
-import Cookies        from 'universal-cookie';
+import Cookies              from 'universal-cookie';
 import i18n                 from 'i18next';
 
 import './component.scss';
 
 const cookies = new Cookies();
 
-@translate(['translation'], { wait: true })
+@translate(['translation'])
 export default class Example extends Component {
   setLang = (code)=> {
     cookies.set('translations-example', code);
@@ -21,12 +21,25 @@ export default class Example extends Component {
     return (
       <div className="example-wrapper">
         <div className="example">
-          <div className="buttons">
-            <button onClick={()=>this.setLang('pl-PL')}>{t('Polish')}</button>
-            <button onClick={()=>this.setLang('en-GB')}>{t('English')}</button>
+          <div className="example-title">
+            {t('internationalization')}
           </div>
-          <div className="text">
-            {t('Hello')}
+          <div className="section">
+            <div className="section-title">
+              {t('languages')}
+            </div>
+            <div className="buttons">
+              <button onClick={()=> this.setLang('pl-PL')}>{t('polish')}</button>
+              <button onClick={()=> this.setLang('en-GB')}>{t('english')}</button>
+            </div>
+          </div>
+          <div className="section">
+            <div className="section-title">
+              {t('Example')}
+            </div>
+            <div className="text">
+              {t('Hello')}
+            </div>
           </div>
         </div>
       </div>

@@ -12,11 +12,20 @@ msgstr ""
 "Last-Translator: \n"
 "Language: pl\n"
 
-msgid "Polish"
-msgstr "Polski"
+msgid "internationalization"
+msgstr "Internacjonalizacja"
 
-msgid "English"
-msgstr "Angielski\t"
+msgid "language"
+msgid_plural "[object Object]"
+msgstr[0] "język"
+msgstr[1] "języki"
+msgstr[2] ""
+
+msgid "polish"
+msgstr "polski"
+
+msgid "english"
+msgstr "angielski"
 
 msgid "Hello"
 msgstr "Cześć"

@@ -1,21 +1,40 @@
+html {
+  background-color: #e8e8e8;
+}
+
 .example-wrapper {
   .example {
-    background-color: #fff9fc;
-    border: 1px solid #000058;
-    border-radius: 15px;
-    width: 300px;
-    margin: 40px auto;
-    padding: 10px;
+    width: 400px;
+    margin: 60px auto;
+    box-shadow: 2px 2px 10px 0 rgba(37, 37, 37, 0.75);
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .example-title {
+      font-size: 30px;
+      text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.75);
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      border-bottom: 1px solid gray;
+    }
+
+    .section {
+      .section-title {
+        font-size: 16px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+    }
 
     .buttons {
-      display: flex;
-      justify-content: center;
+      margin-bottom: 20px;
 
       button {
         margin: 0 10px;
         padding: 10px;
         border: 1px solid darkgray;
-        border-radius: 15px;
         font-size: 14px;
         cursor: pointer;
 
@@ -23,16 +42,18 @@
           background-color: darkgray;
           color: white;
         }
+
+        &:focus {
+          outline: 0;
+        }
       }
-
-      button:focus {outline:0;}
     }
+  }
 
-    .text {
-      margin: 20px 0;
-      padding: 10px;
-      text-align: center;
-      font-size: 18px;
-    }
+  .text {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
   }
 }
